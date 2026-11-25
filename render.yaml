@@ -9,7 +9,7 @@ services:
     name: skybooker-flight-booking
     runtime: node
     plan: free
-    buildCommand: npm install --prefix backend && npm install --prefix frontend && npm run build
+    buildCommand: npm install --include=dev --prefix backend && npm install --include=dev --prefix frontend && npm run build
     startCommand: npm run start
     healthCheckPath: /api/health
     envVars:
